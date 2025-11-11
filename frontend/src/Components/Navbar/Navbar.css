@@ -42,3 +42,15 @@
     align-items: center;
     gap: 45px;
 }
+.nav-login-cart button {
+  width: 157px;
+  height: 58px;
+  outline: none;
+  border: 1px solid #7a7a7a; /* added color for border */
+  border-radius: 75px;
+  background: #515151; /* added background color */
+  color: white; /* fixed text color */
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer; /* fixed cursor syntax */
+}
