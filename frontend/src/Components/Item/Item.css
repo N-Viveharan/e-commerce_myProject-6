@@ -1,5 +1,7 @@
 .item {
   width: 350px;
+  margin-right: 20px;
+   flex: 0 0 calc(25%- 20px); 
 }
 
 .item p {

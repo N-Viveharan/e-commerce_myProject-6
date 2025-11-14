@@ -4,11 +4,12 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 50px;
+  margin-top: 50px;
 }
 
 .footer-logo {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -23,6 +24,9 @@ footer {
   gap: 50px;
   color: #252525;
   font-size: 20px;
+   justify-content: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
 }
 
 .footer-links li {
@@ -32,6 +36,8 @@ footer {
 .footer-social-icon {
   display: flex;
   gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .footer-icons-container {
