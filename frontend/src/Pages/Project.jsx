@@ -3,6 +3,7 @@ import { ShopContext } from '../Context/ShopContext'
 import { useLocation } from 'react-router-dom'
 import Breadcrums from '../Components/Breadcrums/Breadcrums'
 import ProductDisplay from '../Components/ProductDisplay/ProductDisplay';
+import Description from '../Components/DescriptionBox/Description';
 
 function Project() {
   const { all_product } = useContext(ShopContext);
@@ -18,6 +19,7 @@ function Project() {
     <div>
       <Breadcrums product={product} />
       <ProductDisplay product={product}/>
+      <Description/>
     </div>
   );
 }
