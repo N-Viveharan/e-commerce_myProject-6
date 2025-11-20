@@ -3,7 +3,7 @@ import './Breadcrums.css'
 import arrow_icon from '../Assets/breadcrum_arrow.png'
 
 function Breadcrums({ product }) {
-    console.log({product});
+    
     
   return (
     <div className='breadcrum'>
