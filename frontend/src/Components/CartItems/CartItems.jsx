@@ -4,6 +4,8 @@ import { ShopContext } from '../../Context/ShopContext'
 import remove_icon from '../Assets/cart_cross_icon.png'
 function CartItems() {
     const {all_product,cartItems,removeFromCart}=useContext(ShopContext)
+   
+    
   return (
     <div className='cartitems'>
         <div className="cartitems-format-main">
@@ -56,7 +58,8 @@ function CartItems() {
             <div className="cartitems-promocode">
                 <p>If you have a promo code ,Enter it here</p>
                 <div className="cartitems-promobox">
-
+                    <input type="text" placeholder='promo code' />
+                    <button>Submit</button>
                     
                     
                 </div>
