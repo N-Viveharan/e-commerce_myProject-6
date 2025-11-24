@@ -26,7 +26,7 @@ function CartItems() {
                 <p>${e.new_price}</p>
                 <button className='cartitems-quantity'>{cartItems[e.id]}</button>
                 <p>${e.new_price*cartItems[e.id]}</p>
-                <img className='cartitems-remove-icon' src={remove_icon} onClick={()=>{removeFromCart(e.id)}} alt="" />
+                <img className='cartitems-remove-icon' src={remove_icon} alt=""  onClick={()=>{removeFromCart(e.id)}} />
             </div>
              <hr />
         </div>
@@ -58,10 +58,9 @@ function CartItems() {
             <div className="cartitems-promocode">
                 <p>If you have a promo code ,Enter it here</p>
                 <div className="cartitems-promobox">
-                    <input type="text" placeholder='promo code' />
+                    <input type="text" placeholder="promo code" />
                     <button>Submit</button>
-                    
-                    
+                  
                 </div>
             </div>
         </div>
