@@ -160,4 +160,9 @@
   .hero-hand-icon img{
     width: 55px;
   }
+  .hero-latest-btn{
+    width: 200px;
+    height: 45px;
+    font-size: 14px;
+  }
 }
