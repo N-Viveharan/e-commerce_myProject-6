@@ -109,7 +109,7 @@
     font-size: 14px;
 }
 }
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
     .newsletter {
        
         margin-bottom: 60px;

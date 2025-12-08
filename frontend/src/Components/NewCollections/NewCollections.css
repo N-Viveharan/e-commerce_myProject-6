@@ -49,6 +49,7 @@
 @media (max-width: 1024px) {
     .new-collections {
         height: 60vh;
+        margin-bottom: 250px;
     }
 
     .new-collections h1 {
