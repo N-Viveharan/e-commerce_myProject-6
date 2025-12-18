@@ -4,28 +4,43 @@ import upload_area from '../../assets/upload_area.svg'
 function AddProduct() {
 
   const [image,setImage]=useState(false)
+  const [productDetails, setProductDetails] = useState({
+    name: "",
+    image: "",
+    category: "women",
+    new_price: "",
+    old_price: ""
+})
+const changeHandler = (e) => {
+    setProductDetails({...productDetails, [e.target.name]: e.target.value})
+}
   const imageHandler=(e)=>{
     setImage(e.target.files[0])
   }
+  const Add_Product=async()=>{
+    console.log(productDetails);
+    
+  }
   return (
     <div className='add-product '>
+      
       <div className="addproduct-itemfield">
       <p>Product title</p>
-      <input type="text" name='name' placeholder='Type here' />
+      <input type="text" value={productDetails.name} onChange={changeHandler} name='name' placeholder='Type here' />
     </div>
     <div className="addproduct-price">
       <div className="addproduct-itemfield">
         <p>Price</p>
-        <input type="text" name="old_price" placeholder='Type here' />
+        <input type="text" value={productDetails.old_price} onChange={changeHandler} name="old_price" placeholder='Type here' />
       </div>
       <div className="addproduct-itemfield">
         <p>Offer Price</p>
-        <input type="text" name="new_price" placeholder='Type here' />
+        <input type="text" value={productDetails.new_price} onChange={changeHandler} name="new_price" placeholder='Type here' />
       </div>
     </div>
     <div className="addproduct-itemfield">
       <p>Product Category</p>
-      <select name="category" className='add-product-selector'>
+      <select value={productDetails.category} onChange={changeHandler} name="category" className='add-product-selector'>
         <option value="women">women</option>
         <option value="men">men</option>
         <option value="kid">kid</option>
@@ -38,7 +53,9 @@ function AddProduct() {
       <input onChange={imageHandler} type="file" name='image' id='file-input' hidden />
 
     </div>
-    <button className='addproduct-btn'>
+    <button onClick={()=>{
+      Add_Product()
+    }} className='addproduct-btn'>
        ADD
     </button>
     </div>
