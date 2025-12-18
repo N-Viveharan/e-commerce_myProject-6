@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './AddProduct.css'
+import upload_area from '../../assets/upload_area.svg'
 function AddProduct() {
+
+  const [image,setImage]=useState(false)
+  const imageHandler=(e)=>{
+    setImage(e.target.files[0])
+  }
   return (
     <div className='add-product '>
       <div className="addproduct-itemfield">
@@ -21,10 +27,20 @@ function AddProduct() {
       <p>Product Category</p>
       <select name="category" className='add-product-selector'>
         <option value="women">women</option>
-        <option value="women">women</option>
-        <option value="women">women</option>
+        <option value="men">men</option>
+        <option value="kid">kid</option>
       </select>
     </div>
+    <div className="addproduct-itemfieid">
+      <label htmlFor="file-input">
+         <img src={image?URL.createObjectURL(image):upload_area} alt="" />
+      </label>
+      <input onChange={imageHandler} type="file" name='image' id='file-input' hidden />
+
+    </div>
+    <button className='addproduct-btn'>
+       ADD
+    </button>
     </div>
   )
 }
